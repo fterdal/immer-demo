@@ -17,11 +17,28 @@ const originalObject = {
 
 const newObject = produce(originalObject, draft => {
   draft.name = "Travis"
+
+  // throws an error!
+  // draft.first.second.third.fourth = "some value"
+
+  // does NOT throw an error
+  // draft.first = {
+  //   second: {
+  //     third: {
+  //       fourth: "some value"
+  //     }
+  //   }
+  // }
+
+  // console.log(draft)
 })
 
 const areObjectsTheSame = originalObject === newObject
 const areNamesTheSame = originalObject.name === newObject.name
 const areTasksTheSame = originalObject.tasks === newObject.tasks
+
+// console.log("------------")
+// console.log(newObject)
 
 console.log("------------")
 
