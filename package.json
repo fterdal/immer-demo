@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^3.0.0",
-    "immer": "^5.3.6",
+    "immer": "^8.0.1",
     "nodemon": "^2.0.2"
   }
 }
